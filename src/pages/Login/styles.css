@@ -1,0 +1,131 @@
+body {
+    background-image: url(../../assets/background.png);
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.header h1 {
+    font-family: 'Rubik';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+
+    color: #FFFFFF;
+}
+
+.container-login {
+    display: flex;
+    align-items: center;
+    gap: 91px;
+}
+
+.form {
+    background-color: white;
+    max-width: 513px;
+    max-height: 535px;
+    padding: 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 62px;
+    color: #FFFFFF;
+}
+
+.title strong {
+    color: #7978D9;
+}
+
+.subtitle {
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+
+    color: #FFFFFF;
+}
+
+.btn-cadastro {
+    all: unset;
+    width: 284px;
+    height: 48px;
+
+    background-color: #7978D9;
+    border-radius: 5px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.login {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    color: #7978D9;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.label,
+.input {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #484848;
+}
+
+.label {
+    margin-bottom: 8px;
+}
+
+.input {
+    max-width: 449px;
+    height: 63px;
+    background: #FFFFFF;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    margin-bottom: 31px;
+    padding: 0 10px;
+}
+
+.btn-entrar {
+    all: unset;
+
+    width: 449px;
+    height: 52px;
+    background: #7978D9;
+    border-radius: 5px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    text-align: center;
+
+    margin-top: 73px;
+    margin-bottom: 53px;
+}
