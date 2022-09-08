@@ -30,10 +30,10 @@ function Signin() {
 
     return (
         <>
-            {/* <header className='header'>
+            <header className='header'>
                 <img src={logo} alt="DinDin Logo" />
                 <h1>Dindin</h1>
-            </header> */}
+            </header>
             <div className='container-signin'>
                 <form className='form' onSubmit={handleSubmit}>
                     <h1 className='title'>Cadastre-se</h1>
