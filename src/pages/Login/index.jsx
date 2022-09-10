@@ -1,4 +1,4 @@
-import './style.css';
+import './styles.css';
 import Logo from '../../assets/logo.svg'
 import { useRef } from 'react';
 import api from '../../services/api';
@@ -20,7 +20,7 @@ function LoginUsuario() {
             setItem('token', resposta.data.token);
             setItem('usuario', resposta.data.usuario.nome);
 
-            navigate('/caminhoPrincipal')
+            navigate('/caminhoPrincipal-main')
         } catch (error) {
             console.log(error)
         }
