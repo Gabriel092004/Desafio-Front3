@@ -1,11 +1,13 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 import api from '../../services/api';
 import './styles.css';
 
 function Signin() {
-    const [users, setUsers] = useState([]);
-    const [form, setForm] = useState({ nome: '', email: '', senha: '' })
+    // const [users, setUsers] = useState([]);
+    const [form, setForm] = useState({ nome: '', email: '', senha: '', confirmarSenha: '' })
+    // const navigate = useNavigate();
 
     function handleChangeInputValue(e) {
         setForm({ ...form, [e.target.nome]: e.target.value })
@@ -14,14 +16,23 @@ function Signin() {
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-            if (!form.nome || !form.email || !form.senha) {
+            if (!form.nome || !form.email || !form.senha || !form.confirmarSenha) {
                 return;
             }
-            const response = await api.post('/usuarios', {
+
+            if (form.confirmarSenha !== form.senha) {
+                alert('Verifique as senhas')
+                return;
+            }
+
+            const response = await api.post('/usuario', {
                 ...form
             });
 
-            setUsers([...users, response.data]);
+            // setUsers([...users, response.data]);
+
+            console.log(response);
+            // navigate('/Login');
 
         } catch (error) {
             console.log(error)
@@ -39,13 +50,15 @@ function Signin() {
                     <h1 className='title'>Cadastre-se</h1>
                     <label className='label'>Nome</label>
                     <input
+                        name='nome'
                         className='input'
                         type='text'
-                        value={form.name}
+                        value={form.nome}
                         onChange={handleChangeInputValue}
                     />
                     <label className='label'>E-mail</label>
                     <input
+                        name='email'
                         className='input'
                         type='text'
                         value={form.email}
@@ -53,6 +66,7 @@ function Signin() {
                     />
                     <label className='label'>Senha</label>
                     <input
+                        name='senha'
                         className='input'
                         type='password'
                         value={form.senha}
@@ -60,9 +74,10 @@ function Signin() {
                     />
                     <label className='label'>Confirmação de senha</label>
                     <input
+                        name='confirmarSenha'
                         className='input'
                         type='password'
-                        value={form.senha}
+                        value={form.confirmarSenha}
                         onChange={handleChangeInputValue}
                     />
                     <button className='btn-cadastrar'>Cadastrar</button>
