@@ -1,15 +1,21 @@
-import { Navigate, Outlet, Route, Routes } from "react-router-dom";
-import Login from './pages/Login';
+import { Routes, Route, Outlet, Navigate } from "react-router-dom";
+import LoginUsuario from "./pages/login";
+import { getItem } from "./utils/storage";
 
-function ProtectedRoutes({ redirectTo }) {
-    const isAuThenticated = true;
-    return isAuThenticated ? <Outlet /> : <Navigate to={redirectTo} />
+function ProtectedRoutes() {
+    const isAuthenticated = getItem('token');
+
+    return isAuthenticated ? <Outlet /> : <Navigate to='/' />
 }
 
 export default function MainRoutes() {
     return (
         <Routes>
-            <Route exact path="/" element={<Login />} />
+            <Route path='/' element={<LoginUsuario />} />
+            <Route path='/cadastrar' element={<></>} />
+            <Route element={<ProtectedRoutes />} >
+                <Route path='/caminhoPrincipal-main' element={<></>} />
+            </Route>
         </Routes>
     )
 }
