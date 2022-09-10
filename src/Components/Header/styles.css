@@ -1,11 +1,8 @@
 .container-header {
     height: 100px;
-    background: linear-gradient(90.23deg, #05EDE3 0.02%, #645FFB 99.63%);
+    background-color: linear-gradient(90deg, rgba(5, 237, 227, 1) 0%, rgba(100, 96, 251, 1) 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.images {
-    margin-right: 20px;
+    padding: 41px 100px;
 }
