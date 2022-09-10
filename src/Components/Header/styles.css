@@ -1,0 +1,11 @@
+.container-header {
+    height: 100px;
+    background: linear-gradient(90.23deg, #05EDE3 0.02%, #645FFB 99.63%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.images {
+    margin-right: 20px;
+}
