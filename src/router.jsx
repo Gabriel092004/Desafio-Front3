@@ -12,10 +12,10 @@ function ProtectedRoutes() {
 export default function MainRoutes() {
     return (
         <Routes>
-            <Route path='/' element={<LoginUsuario />} />
-            <Route path='/usuario' element={Signin} />
+            <Route exact path='/' element={<LoginUsuario />} />
+            <Route exact path='/usuario' element={<Signin />} />
             <Route element={<ProtectedRoutes />} >
-                <Route path='/caminhoPrincipal-main' element={<></>} />
+                <Route exact path='/caminhoPrincipal-main' element={<></>} />
             </Route>
         </Routes>
     )
