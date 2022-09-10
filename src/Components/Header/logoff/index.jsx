@@ -3,12 +3,18 @@ import { getItem, removeItem } from "../../../utils/storage";
 
 export default async function Logoff() {
 
-    const { token, usuario } = getItem('usuario')
+    try {
+        const { token, usuario } = getItem('usuario', 'token')
 
-    const navigate = useNavigate();
+        const navigate = useNavigate();
 
-    removeItem('usuario');
-    removeItem('token');
+        removeItem('usuario');
+        removeItem('token');
 
-    navigate('/');
+        navigate('/');
+    } catch (error) {
+        console.log(error)
+    }
+
+
 }
