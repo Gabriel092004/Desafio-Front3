@@ -7,7 +7,7 @@ import './styles.css';
 function Signin() {
     // const [users, setUsers] = useState([]);
     const [form, setForm] = useState({ nome: '', email: '', senha: '', confirmarSenha: '' })
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     function handleChangeInputValue(e) {
         setForm({ ...form, [e.target.nome]: e.target.value })
@@ -32,7 +32,7 @@ function Signin() {
             // setUsers([...users, response.data]);
 
             console.log(response);
-            // navigate('/Login');
+            navigate('/Login');
 
         } catch (error) {
             console.log(error)
@@ -82,7 +82,7 @@ function Signin() {
                     />
                     <button className='btn-cadastrar'>Cadastrar</button>
 
-                    <a href='#'>Já tem cadastro? Clique aqui!</a>
+                    <a href=''>Já tem cadastro? Clique aqui!</a>
                 </form>
             </div>
         </>
