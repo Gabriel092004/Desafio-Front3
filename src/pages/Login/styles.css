@@ -7,18 +7,16 @@
 }
 
 .App {
-    width: 1440px;
-    height: 1024px;
+    width: 100%;
+    height: 100%;
     background-image: url('../../assets/background.png');
-    background-size: cover;
-    padding: 40px 100px;
+    /* padding: 0 100px; */
 }
 
 .header {
-    width: 100px;
     display: flex;
     align-items: center;
-    margin-bottom: 200px;
+    padding: 41px 100px;
 }
 
 .header_img {
@@ -55,7 +53,7 @@
     margin-bottom: 35px;
 }
 
-.section_span {
+.section-one_span {
     color: #7978D9;
 }
 
@@ -96,19 +94,20 @@
 .btn_section-two {
     width: 449px;
     height: 48px;
+    padding: 0 10px;
 }
 
 .section-two {
     display: flex;
     flex-direction: column;
-    width: 515px;
-    height: 535px;
+    max-width: 515px;
+    max-height: 535px;
     background-color: #FFF;
-    padding: 55px 30px;
+    padding: 60px 25px;
 }
 
 .section-two_span {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 28px;
     color: #7978D9;
@@ -116,7 +115,7 @@
 }
 
 .label {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #484848;
@@ -133,6 +132,6 @@
     border-radius: 5px;
     margin-bottom: 30px;
 
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-size: 20px;
 }
