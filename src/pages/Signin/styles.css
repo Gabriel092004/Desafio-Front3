@@ -95,6 +95,8 @@ body {
     margin-top: 38px;
     margin-bottom: 12px;
 
+    cursor: pointer;
+
 }
 
 .signin-link {

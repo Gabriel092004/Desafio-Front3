@@ -25,6 +25,16 @@ function LoginUsuario() {
             console.log(error)
         }
     }
+
+    // async function handleCadastro() {
+    //     try {
+    //         //  const resposta = await api.post('/usuario')
+
+    //         navigate('/usuario')
+    //     } catch (error) {
+
+    //     }
+    // }
     return (
         <div className="App">
             <header className='header'>
@@ -41,9 +51,9 @@ function LoginUsuario() {
                         com o DINDIN, você tem tudo num único lugar e em um clique de distância.
                     </p>
                     <Link className='link-signin' to='/Signin'>
-                        <button className='btn_section-one'>
+                        <Link className='btn_section-one' to={'/usuario'}>
                             Cadastre-se
-                        </button>
+                        </Link>
                     </Link>
                 </section>
                 <section className='section-two'>
