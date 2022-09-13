@@ -83,7 +83,7 @@ function Signin() {
                     />
                     <button className='btn-cadastrar'>Cadastrar</button>
 
-                    <Link className='signin-link' to='/login'>Já tem cadastro? Clique aqui!</Link>
+                    <Link className='signin-link' to='/Login'>Já tem cadastro? Clique aqui!</Link>
                 </form>
             </div>
         </>
