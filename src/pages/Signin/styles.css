@@ -94,7 +94,10 @@ body {
     margin-bottom: 12px;
 
     cursor: pointer;
+}
 
+.btn-cadastrar:hover {
+    background-color: #6765c2;
 }
 
 .signin-link {
