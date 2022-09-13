@@ -1,0 +1,38 @@
+.resumo {
+    width: 236px;
+    height: 196px;
+    background-color: #FAFAFA;
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    padding: 26px 33px;
+}
+
+.resumo h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #2F2F2F;
+
+    margin-bottom: 23px;
+}
+
+.resumo .entradas,
+.resumo .saidas,
+.resumo .saldo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resumo .entradas {
+    margin-bottom: 10px;
+}
+
+.resumo ..saidas {
+    margin-bottom: 60px;
+}
