@@ -6,3 +6,31 @@
     align-items: center;
     padding: 41px 100px;
 }
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.logo h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    color: #FFFFFF;
+}
+
+.images {
+    display: flex;
+    align-items: center;
+}
+
+.images span {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin-right: 16px;
+}
