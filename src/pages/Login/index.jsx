@@ -3,7 +3,7 @@ import Logo from '../../assets/logo.svg'
 import { useRef } from 'react';
 import api from '../../services/api';
 import { setItem } from '../../utils/storage';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 function LoginUsuario() {
@@ -40,9 +40,11 @@ function LoginUsuario() {
                         Organizar as suas finanças nunca foi tão fácil,
                         com o DINDIN, você tem tudo num único lugar e em um clique de distância.
                     </p>
-                    <button className='btn_section-one'>
-                        Cadastre-se
-                    </button>
+                    <Link className='link-signin' to='/Signin'>
+                        <button className='btn_section-one'>
+                            Cadastre-se
+                        </button>
+                    </Link>
                 </section>
                 <section className='section-two'>
                     <span className='section-two_span'>

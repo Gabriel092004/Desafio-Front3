@@ -66,6 +66,11 @@
     margin-bottom: 45px;
 }
 
+.link-signin {
+    text-decoration: none;
+    color: white;
+}
+
 .btn_section-one,
 .btn_section-two {
     all: unset;
