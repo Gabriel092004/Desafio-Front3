@@ -37,7 +37,7 @@ function Signin() {
     }
 
     return (
-        <>
+        <div className='signin'>
             <header className='header'>
                 <img src={logo} alt="DinDin Logo" />
                 <h1>Dindin</h1>
@@ -86,7 +86,7 @@ function Signin() {
                     <Link className='signin-link' to='/'>Já tem cadastro? Clique aqui!</Link>
                 </form>
             </div>
-        </>
+        </div>
     );
 }
 
