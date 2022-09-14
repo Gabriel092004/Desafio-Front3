@@ -14,7 +14,7 @@ const Header = () => {
             </div>
             <div className='images'>
                 <img src={Profile} />
-                <span>Sidney Silveira</span>
+                <span>Nome do Usuário</span>
                 <img src={Logout} />
             </div>
         </div>
