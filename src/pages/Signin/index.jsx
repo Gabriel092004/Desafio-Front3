@@ -83,6 +83,8 @@ function Signin() {
                     />
                     <button className='btn-cadastrar'>Cadastrar</button>
 
+                    {/* o button cadastrar não está mandando a requisição pro bd,checar o porque */}
+
                     <Link className='signin-link' to='/'>Já tem cadastro? Clique aqui!</Link>
                 </form>
             </div>
