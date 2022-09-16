@@ -11,6 +11,9 @@ function Main() {
             <div className='transacoes'>
 
             </div>
+            <div>
+                {/* <Resumo /> */}
+            </div>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import { Routes, Route, Outlet, Navigate } from "react-router-dom";
 import LoginUsuario from "./pages/Login";
 import Signin from "./pages/Signin";
+import Main from "./pages/Main";
 import { getItem } from "./utils/storage";
 
 function ProtectedRoutes() {
@@ -14,6 +15,7 @@ export default function MainRoutes() {
         <Routes>
             <Route exact path='/' element={<LoginUsuario />} />
             <Route exact path='/usuario' element={<Signin />} />
+            <Route exact path='/main' element={<Main />} />
             <Route element={<ProtectedRoutes />} >
                 <Route exact path='/caminhoPrincipal-main' element={<></>} />
             </Route>
