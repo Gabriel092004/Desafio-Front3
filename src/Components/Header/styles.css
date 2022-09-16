@@ -34,3 +34,8 @@
     color: #FFFFFF;
     margin-right: 16px;
 }
+
+.logout {
+    all: unset;
+    cursor: pointer;
+}

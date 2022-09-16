@@ -4,12 +4,11 @@ import Profile from '../../assets/user.svg'
 import './styles.css'
 
 
-
 const Header = () => {
     return (
-        <div className="container-header">
+        <div className='container-header'>
             <div className='logo'>
-                <img src={Logo} />
+                <img src={Logo} alt='Logomarca Dindin' />
                 <h1>Dindin</h1>
             </div>
             <div className='images'>
