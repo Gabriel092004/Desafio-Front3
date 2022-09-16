@@ -7,7 +7,6 @@ function Main() {
     return (
         <div className='main'>
 
-            <Header />
             <div className='transacoes'>
 
             </div>
