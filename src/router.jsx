@@ -15,9 +15,8 @@ export default function MainRoutes() {
         <Routes>
             <Route exact path='/' element={<LoginUsuario />} />
             <Route exact path='/usuario' element={<Signin />} />
-            <Route exact path='/main' element={<Main />} />
             <Route element={<ProtectedRoutes />} >
-                <Route exact path='/caminhoPrincipal-main' element={<></>} />
+                <Route exact path='/caminhoPrincipal-main' element={<Main />} />
             </Route>
         </Routes>
     )
