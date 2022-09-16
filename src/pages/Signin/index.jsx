@@ -16,7 +16,7 @@ function Signin() {
         e.preventDefault();
         try {
             if (!form.nome || !form.email || !form.senha || !form.confirmarSenha) {
-                return;
+                return alert('Todos os campos são obrigatórios');
             }
 
             if (form.confirmarSenha !== form.senha) {
@@ -24,12 +24,12 @@ function Signin() {
                 return;
             }
 
-            const response = await api.post('/usuarios', {
+            const response = await api.post('/usuario', {
                 ...form
             });
 
             console.log(response);
-            navigate('/Login');
+            navigate('/');
 
         } catch (error) {
             console.log(error)
