@@ -36,6 +36,5 @@
 }
 
 .logout {
-    all: unset;
     cursor: pointer;
 }
