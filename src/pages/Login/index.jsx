@@ -44,7 +44,7 @@ function LoginUsuario() {
                         com o DINDIN, você tem tudo num único lugar e em um clique de distância.
                     </p>
                     <Link className='link-signin' to='/Signin'>
-                        <Link className='btn_section-one' to={'/usuario'}>
+                        <Link className='btn_section-one' to={'/signin'}>
                             Cadastre-se
                         </Link>
                     </Link>
