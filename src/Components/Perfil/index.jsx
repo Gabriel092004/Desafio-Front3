@@ -5,7 +5,7 @@ import { getItem, setItem } from '../../utils/storage';
 import './styles.css';
 
 
-export default function ModalEditProfile({ setShowModalEditProfile }) {
+function ModalEditProfile({ setShowModalEditProfile }) {
     const token = getItem('token');
     const headers = {
         Authorization: `Bearer ${token}`,
@@ -13,9 +13,6 @@ export default function ModalEditProfile({ setShowModalEditProfile }) {
 
     const [user, setUser] = useState({});
     const [form, setForm] = useState({});
-    // const [showPassword, setShowPassword] = useState(false);
-    // const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-    // const [errorMessage, setErrorMessage] = useState('');
 
     useEffect(() => {
         loadUser();
@@ -61,7 +58,7 @@ export default function ModalEditProfile({ setShowModalEditProfile }) {
                     src={close}
                     alt='Fechar janela'
                     onClick={() => setShowModalEditProfile(false)}
-                    className='btn-fechar'
+                    className='btn-close'
                 />
 
                 <form className='modal-form' onSubmit={handleSubmit}>
@@ -74,7 +71,7 @@ export default function ModalEditProfile({ setShowModalEditProfile }) {
                         type='text'
                         name='nome'
                         className='input'
-                        value={form.nome || ''}
+                        value={form.nome}
                         onChange={handleChangeInputValue}
                     />
 
@@ -86,7 +83,7 @@ export default function ModalEditProfile({ setShowModalEditProfile }) {
                         type='email'
                         name='email'
                         className='input'
-                        value={form.email || ''}
+                        value={form.email}
                         onChange={handleChangeInputValue}
                     />
 
@@ -113,15 +110,15 @@ export default function ModalEditProfile({ setShowModalEditProfile }) {
                         value={form.confirmPassword}
                         onChange={handleChangeInputValue}
                     />
-                    <div className='btn-alinhar'>
-                        <button className='btn-confirmar' type='submit'>
+                    <div className='btn-align'>
+                        <button className='btn-confirm' type='submit'>
                             Confirmar
                         </button>
                     </div>
-
-
                 </form>
             </div>
         </div>
     );
 }
+
+export default ModalEditProfile;

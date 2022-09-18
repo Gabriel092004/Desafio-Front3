@@ -41,14 +41,7 @@
     text-align: left;
 }
 
-/* .modal-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
-.form-label,
+.label,
 .input {
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
@@ -58,17 +51,17 @@
     color: #484848;
 }
 
-.form-label {
+.label {
     margin-bottom: 9px;
 }
 
-.btn-fechar {
+.btn-close {
     position: absolute;
     top: 67px;
     right: 65px;
 }
 
-.btn-confirmar {
+.btn-confirm {
     all: unset;
     width: 236px;
     height: 46px;
@@ -82,7 +75,11 @@
     text-align: center;
 }
 
-.btn-alinhar {
+.btn-confirm:hover {
+    background-color: #6765c2;
+}
+
+.btn-align {
     display: flex;
     justify-content: center;
 }
