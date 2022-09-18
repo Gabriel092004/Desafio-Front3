@@ -7,6 +7,8 @@ import './styles.css';
 
 
 const Header = () => {
+    const usuario = getItem('usuario');
+
     const navigate = useNavigate()
 
     function logout() {

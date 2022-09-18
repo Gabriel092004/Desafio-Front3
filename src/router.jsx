@@ -15,7 +15,7 @@ export default function MainRoutes() {
     return (
         <Routes>
             <Route exact path='/' element={<LoginUsuario />} />
-            <Route exact path='/usuario' element={<Signin />} />
+            <Route exact path='/signin' element={<Signin />} />
             <Route element={
                 <>
                     <Header />
