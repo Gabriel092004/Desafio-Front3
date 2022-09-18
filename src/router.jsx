@@ -22,7 +22,7 @@ export default function MainRoutes() {
                     <ProtectedRoutes />
                 </>
             } >
-                <Route exact path='/caminhoPrincipal-main' element={<Main />} />
+                <Route exact path='/main' element={<Main />} />
             </Route>
         </Routes>
     )

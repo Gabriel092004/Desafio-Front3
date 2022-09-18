@@ -10,6 +10,8 @@ function LoginUsuario() {
     const emailRef = useRef('');
     const senhaRef = useRef('');
 
+
+
     const navigate = useNavigate();
 
     async function handleSubmit() {
@@ -18,23 +20,14 @@ function LoginUsuario() {
             const resposta = await api.post('/login', { email: emailRef.current.value, senha: senhaRef.current.value })
 
             setItem('token', resposta.data.token);
-            setItem('usuario', resposta.data.usuario.nome);
+            setItem('nome', resposta.data.usuario.nome);
 
-            navigate('/caminhoPrincipal-main')
+            navigate('/main')
         } catch (error) {
             console.log(error)
         }
     }
 
-    // async function handleCadastro() {
-    //     try {
-    //         //  const resposta = await api.post('/usuario')
-
-    //         navigate('/usuario')
-    //     } catch (error) {
-
-    //     }
-    // }
     return (
         <div className="App">
             <header className='header'>

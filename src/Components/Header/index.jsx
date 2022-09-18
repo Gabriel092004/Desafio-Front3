@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import Logo from '../../assets/logo.svg';
 import Logout from '../../assets/logout.svg';
 import Profile from '../../assets/user.svg';
-import { clear } from '../../utils/storage';
+import { clear, getItem, setItem } from '../../utils/storage';
 import './styles.css';
 
 
@@ -14,6 +14,8 @@ const Header = () => {
         navigate('/')
     }
 
+    const Nome = getItem('nome');
+
     return (
         <div className='container-header'>
             <div className='logo'>
@@ -22,7 +24,7 @@ const Header = () => {
             </div>
             <div className='images'>
                 <img src={Profile} />
-                <span>Nome do Usuário</span>
+                <span>{Nome}</span>
                 <img className='logout' src={Logout} onClick={() => logout()} />
             </div>
         </div>
