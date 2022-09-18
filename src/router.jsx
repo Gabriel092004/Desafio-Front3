@@ -3,7 +3,6 @@ import LoginUsuario from "./pages/Login";
 import Signin from "./pages/Signin";
 import Main from "./pages/Main";
 import { getItem } from "./utils/storage";
-import Header from "./Components/Header";
 
 function ProtectedRoutes() {
     const isAuthenticated = getItem('token');
@@ -18,7 +17,6 @@ export default function MainRoutes() {
             <Route exact path='/signin' element={<Signin />} />
             <Route element={
                 <>
-                    <Header />
                     <ProtectedRoutes />
                 </>
             } >
