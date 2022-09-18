@@ -31,7 +31,7 @@ function LoginUsuario() {
     return (
         <div className="App">
             <header className='header'>
-                <img className='header_img' src={Logo}></img>
+                <img className='header_img' src={Logo} alt='Logo de Dindin'></img>
                 <h1 className='header_h1'>Dindin</h1>
             </header>
             <div className='div'>
