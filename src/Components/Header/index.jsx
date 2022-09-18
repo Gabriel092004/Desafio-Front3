@@ -6,7 +6,7 @@ import { clear, getItem, setItem } from '../../utils/storage';
 import './styles.css';
 
 
-const Header = () => {
+function Header({ setShowModalEditProfile }) {
     const usuario = getItem('usuario');
 
     const navigate = useNavigate()
@@ -25,7 +25,7 @@ const Header = () => {
                 <h1>Dindin</h1>
             </div>
             <div className='images'>
-                <img src={Profile} />
+                <img src={Profile} onClick={() => setShowModalEditProfile(true)} />
                 <span>{Nome}</span>
                 <img className='logout' src={Logout} onClick={() => logout()} />
             </div>
