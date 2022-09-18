@@ -9,6 +9,7 @@
 .main {
     background-image: none;
     background: linear-gradient(90deg, rgba(5, 237, 227, 1) 0%, rgba(100, 96, 251, 1) 100%);
+    position: relative;
 }
 
 .transacoes {

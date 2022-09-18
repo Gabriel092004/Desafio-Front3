@@ -5,11 +5,15 @@ import api from '../../services/api';
 import { getItem } from '../../utils/storage';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import ModalEditProfile from '../../Components/Perfil';
 
 
 function Main() {
 
     const [response, setResponse] = useState();
+    const [showModalEditProfile, setShowModalEditProfile] = useState(false);
+    const token = getItem('token');
+
     async function handleTransitions() {
         const token = getItem('token');
 
@@ -28,21 +32,31 @@ function Main() {
 
 
     return (
-        <div className='main'>
-            <div className='transacoes'>
-                <table className='table-transacoes'>
-                    <tr>
-                        <td className='table_td data'>Data</td>
-                        <td className='table_td'>Dia da semana</td>
-                        <td className='table_td'>Categoria</td>
-                        <td className='table_td'>Valor</td>
-                    </tr>
-                </table>
+        <main>
+            <Header setShowModalEditProfile={() => setShowModalEditProfile(true)} />
+            <div className='main'>
+                <div className='transacoes'>
+                    <table className='table-transacoes'>
+                        <tr>
+                            <td className='table_td data'>Data</td>
+                            <td className='table_td'>Dia da semana</td>
+                            <td className='table_td'>Categoria</td>
+                            <td className='table_td'>Valor</td>
+                        </tr>
+                    </table>
 
-                {/* <Resumo /> */}
+                    {/* <Resumo /> */}
 
+
+                </div>
             </div>
-        </div>
+            {showModalEditProfile && (
+                <ModalEditProfile
+                    // headers={headers}
+                    setShowModalEditProfile={setShowModalEditProfile}
+                />
+            )}
+        </main>
     )
 }
 
